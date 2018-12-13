@@ -15,9 +15,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('http://localhost:8080/')
-
-WebUI.click(findTestObject('Object Repository/Page_PetClinic  a Spring Framework/span_Find owners'))
+WebUI.navigateToUrl('http://localhost:8080/owners/find')
 
 WebUI.click(findTestObject('Object Repository/Page_PetClinic  a Spring Framework/a_Add Owner'))
 
@@ -29,25 +27,17 @@ WebUI.setText(findTestObject('Object Repository/Page_PetClinic  a Spring Framewo
 
 WebUI.setText(findTestObject('Object Repository/Page_PetClinic  a Spring Framework/input_City_city'), 'Luxemburg')
 
-WebUI.setText(findTestObject('Object Repository/Page_PetClinic  a Spring Framework/input_Telephone_telephone'), '+352621123456')
-
-WebUI.click(findTestObject('Object Repository/Page_PetClinic  a Spring Framework/button_Add Owner'))
-
-WebUI.setText(findTestObject('Object Repository/Page_PetClinic  a Spring Framework/input_Telephone_telephone'), '352621123456')
-
-WebUI.click(findTestObject('Object Repository/Page_PetClinic  a Spring Framework/button_Add Owner'))
-
-WebUI.click(findTestObject('Object Repository/Page_PetClinic  a Spring Framework/button_Add Owner'))
-
 WebUI.setText(findTestObject('Object Repository/Page_PetClinic  a Spring Framework/input_Telephone_telephone'), '123456789')
 
 WebUI.click(findTestObject('Object Repository/Page_PetClinic  a Spring Framework/button_Add Owner'))
 
-WebUI.click(findTestObject('Object Repository/Page_PetClinic  a Spring Framework/span_Find owners'))
+WebUI.navigateToUrl('http://localhost:8080/owners/find')
 
 WebUI.setText(findTestObject('Object Repository/Page_PetClinic  a Spring Framework/input_Last name_lastName (1)'), 'Keller')
 
 WebUI.click(findTestObject('Object Repository/Page_PetClinic  a Spring Framework/button_Find          Owner'))
 
 WebUI.verifyElementPresent(findTestObject('Page_PetClinic  a Spring Framework/td_Patrick Keller'), 0)
+
+WebUI.closeBrowser()
 
